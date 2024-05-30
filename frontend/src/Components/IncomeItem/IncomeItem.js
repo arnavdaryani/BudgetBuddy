@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { calender, comment, dollar, trash } from '../../utils/icons';
+import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../../utils/icons';
 import Button from '../Button/Button';
+import { dateFormat } from '../../utils/dateFormat';
 
 function IncomeItem({
     id,
@@ -14,17 +15,65 @@ function IncomeItem({
     indicatorColor,
     type
 }) {
+
+    const categoryIcon = () =>{
+        switch(category) {
+            case 'salary':
+                return money;
+            case 'freelancing':
+                return freelance;
+            case 'investments':
+                return stocks;
+            case 'stocks':
+                return users;
+            case 'bitcoin':
+                return bitcoin;
+            case 'bank':
+                return card;
+            case 'youtube':
+                return yt;
+            case 'other':
+                return piggy;
+            default:
+                return '';
+        }
+    }
+
+    const expenseCatIcon = () =>{
+        switch(category) {
+            case 'education':
+                return book;
+            case 'groceries':
+                return food;
+            case 'health':
+                return medical;
+            case 'subscriptions':
+                return tv;
+            case 'takeaways':
+                return takeaway;
+            case 'clothing':
+                return clothing;
+            case 'travelling':
+                return freelance;
+            case 'other':
+                return circle;
+            default:
+                return '';
+        }
+    }
+
+
   return (
     <IncomeItemStyled indicator={indicatorColor}>
         <div className="icon">
-
+            {type === 'expense' ? expenseCatIcon(): categoryIcon()}
         </div>
         <div className="content">
             <h5>{title}</h5>
             <div className="inner-content">
                 <div className="text">
-                    <p>{dollar} 45</p>
-                    <p>{calender} {date}</p>
+                    <p>{dollar} {amount}</p>
+                    <p>{calender} {dateFormat(date)}</p>
                     <p>
                         {comment}
                         {description}
@@ -39,6 +88,7 @@ function IncomeItem({
                         color={'#fff'}
                         iColor={'#fff'}
                         hColor={'var(--color-green)'}
+                        onClick={() => deleteItem(id)}
                     />
                 </div>
             </div>
