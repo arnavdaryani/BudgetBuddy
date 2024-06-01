@@ -32,3 +32,26 @@ The Expense Tracker MERN web application is designed to help users manage and tr
    ```bash
    git clone https://github.com/arnavdaryani/ExpenseTracker.git
    cd ExpenseTracker
+
+2. **Install dependencies for the backend
+   ```bash
+   cd backend
+   npm install
+
+3. Install dependencies for the frontend
+   ```bash
+   cd ../frontend
+   npm install
+
+4. Set up environment variables
+   ```bash
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+
+5. Run the application
+   ```bash
+   cd backend
+   npm start
+
+   cd ../frontend
+   npm start
