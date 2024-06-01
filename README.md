@@ -14,10 +14,9 @@ The Expense Tracker MERN web application is designed to help users manage and tr
 
 ## Technologies Used
 
-- **Frontend**: React.js, Redux, Bootstrap, Chart.js
+- **Frontend**: React.js, Chart.js
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB, Mongoose
-- **Styling**: CSS, Bootstrap
 
 ## Installation
 
