@@ -30,5 +30,5 @@ The Expense Tracker MERN web application is designed to help users manage and tr
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/expense-tracker-mern.git
-   cd expense-tracker-mern
+   git clone https://github.com/arnavdaryani/ExpenseTracker.git
+   cd ExpenseTracker
