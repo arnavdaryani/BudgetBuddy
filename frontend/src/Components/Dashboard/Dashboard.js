@@ -101,6 +101,40 @@ const DashboardStyled = styled.div`
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          p{
+            color: var(--color-green);
+            opacityL 0.6;
+            font-size: 4.5rem;
+          }
+        }
+      }
+    }
+    .history-con{
+      grid-column: 4 / -1;
+      h2{
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .salary-title{
+        font-size: 1.2rem;
+        span{
+          font-size: 1.8rem;
+        }
+      }
+      .salary-item{
+        background: #FCF6F9;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+        padding: 1rem;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+          font-weight: 600;
+          font-size: 1.6rem;
         }
       }
     }
